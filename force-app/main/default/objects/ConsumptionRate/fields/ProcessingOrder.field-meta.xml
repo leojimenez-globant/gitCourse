@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProcessingOrder</fullName>
+    <inlineHelpText>El orden para el procesamiento del índice de uso entre múltiples índices. Los índices de consumo se evalúan comenzando con el orden de procesamiento más bajo.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

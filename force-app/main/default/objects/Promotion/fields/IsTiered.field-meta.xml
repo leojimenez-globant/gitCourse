@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsTiered</fullName>
+    <inlineHelpText>Este parámetro es permanente y no se puede cambiar después de guardar la promoción. Cree una nueva promoción en su lugar.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

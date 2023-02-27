@@ -1,0 +1,105 @@
+<aura:component controller="StarWarsController">
+    <!-- / Variable donde se guarda el personaje traido de la API -->
+     <aura:attribute name="personaje" type="String[]"/>
+    <!-- / Variable para uso futuro. Deshabilita/habilita los botones depende de lo que reciba -->
+	 <aura:attribute name="Likedisable" type="Boolean" default="true" />
+     
+	    <!-- CABECERA DE PAGINA -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="Personaje"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Star Wars</h1>
+                <h2 class="slds-text-heading--medium">Personaje</h2>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / CABECERA DE PAGINA -->
+    <!-- FORMULARIO PERSONAJE -->
+    <lightning:layout>
+        <lightning:layoutItem padding="around-small" size="6">
+        
+        	<div aria-labelledby="newcharacterform">
+        
+       <fieldset class="slds-box slds-theme--default slds-container--small">
+        <legend id="newcharacterform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          Buscador de Personaje por ID
+        </legend>
+  
+        
+         <form class="slds-form--stacked">          
+            <lightning:input aura:id="formID" label="ID Personaje"
+                             name="formID"
+                             value=""
+                             required="true"
+                             />
+             <lightning:button label="Buscar Personaje" 
+                               class="slds-m-top--medium"
+                               variant="brand"
+                               onclick="{!c.getCharacter}"
+                               
+                               />
+            <lightning:input aura:id="atribID" label="Nombre"
+                             name="formname"
+                             value="{!v.personaje[1]}"
+                             required="true"
+                             disabled="true"					
+                             />
+            <lightning:input aura:id="atribID" label="Altura, Se actualiza en mts"
+                             name="characterheight"
+                             value="{!v.personaje[2]}"
+                             required="true"
+                             disabled="true"
+                             type="number"
+                             /> 
+            <lightning:input aura:id="atribID" label="Genero"
+                             name="charactgender"
+                             value="{!v.personaje[0]}"
+                             required="true"
+                             disabled="true"
+                             /> 
+            <lightning:input aura:id="atribID" label="Color de Cabello"
+                             name="characterhair_color"
+                             value="{!v.personaje[3]}"
+                             required="true"
+                             disabled="true"
+                             />
+             <lightning:input aura:id="atribID" label="Color de ojos"
+                             name="charactereye_color"
+                             value="{!v.personaje[4]}"
+                             required="true"
+                             disabled="true"
+                              />
+             <lightning:input aura:id="atribID" label="URL"
+                             name="characterurl"
+                             value="{!v.personaje[6]}"
+                             required="true"
+                              disabled="true"
+                              />
+             <lightning:input aura:id="atribID" label="Planeta"
+                             name="characterhomeworld"
+                             value="{!v.personaje[5]}"
+                             required="true"
+                              disabled="true"
+                              /> 
+            <lightning:button aura:id="buttonsave"
+                              label="Guardar Personaje" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.clickSave}"
+                              disabled="true"
+                              />
+        </form>
+        
+  
+      </fieldset>
+    
+    </div>
+       
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / FORMULARIO PERSONAJE -->
+</aura:component>

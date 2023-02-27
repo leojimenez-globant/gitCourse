@@ -1,0 +1,32 @@
+<aura:component controller="AccountListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="cases" type="List" />
+    <aura:attribute name="recordId" type="String" />
+	<aura:attribute name="valueCases" type="List"/>
+    <aura:attribute name="casesToUp" type="Case[]"/>
+    <aura:method name="updateListCase" action="{! c.doInit}" description="metodo para re-renderizar la lista de casos de seleccion"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+        <lightning:checkboxGroup name="Checkbox Group"
+                                 label="Seleccione Casos a cerrar"
+                                 options="{! v.cases }"
+                                 value = "{! v.valueCases}"
+                                 onchange="{! c.populateCase }"
+                                 />
+    	<aura:if isTrue="{! !empty(v.valueCases)}" >
+            
+        	<h3 class="slds-section-title--divider">Inserte Motivo del cierre</h3>
+			
+            <aura:iteration items="{! v.casesToUp}" var="case">
+            	<lightning:recordEditForm aura:id="recordEditForm" recordId="{!case.Id}" objectApiName="Case" >
+        			<lightning:messages />
+        			<lightning:outputField fieldName="CaseNumber" />
+        			<lightning:inputField aura:id="atribID" fieldName="Reason_for_closing__c" required= "true" />
+                </lightning:recordEditForm>    
+            </aura:iteration>
+            		<lightning:notificationsLibrary aura:id="notifLib"/>
+        			<lightning:button type ="submit" variant="brand" label="Close Cases" title="Brand action" onclick="{! c.SaveCases}"/>
+            	
+        </aura:if>
+    
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="pass time to chronometer">
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="seeOrNot" type="boolean"/>
+    <aura:attribute name="stop" type="boolean"/>
+</aura:event>

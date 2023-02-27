@@ -1,0 +1,6 @@
+<aura:component>
+	<aura:registerEvent name="cmpStopEvent" type="c:passTime"/>
+    <aura:attribute name="disabled" type="boolean"/>
+
+    <lightning:button variant="brand" label="Stop" onclick="{! c.handleStopClick }" disabled="{!v.disabled}" />
+</aura:component>

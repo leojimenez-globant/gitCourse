@@ -1,0 +1,19 @@
+<template>
+	<div >
+		<lightning-input label="Ingrese el número de personaje que desea buscar:" onchange={handleOnChange} value={searchKey}>
+		</lightning-input>
+		<lightning-button label="Buscar" onclick={clickOnSearch}>
+		</lightning-button>
+		</div>
+		<div class="slds-p-around_medium lgc-bg">
+		<lightning-input data-name="temp" type="text" id="nombre" label="Nombre" readonly></lightning-input>
+		<lightning-input type="text" id="altura" label="Altura" readonly></lightning-input>
+		<lightning-input type="text" id="genero" label="Género" readonly></lightning-input>
+		<lightning-input type="text" id="colorDeCabello" label="Color de cabello" readonly>
+		</lightning-input>
+		<lightning-input type="text" id="colorDeOjos" label="Color de ojos" readonly></lightning-input>
+		<lightning-input type="text" id="url" label="URL" readonly></lightning-input>
+		<lightning-input type="text" id="planeta" label="Planeta" readonly></lightning-input>
+		<lightning-input type="text" id="numero" label="Número de personaje" placeholder="" readonly></lightning-input>
+	</div>
+</template>

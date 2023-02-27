@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BillingTerm</fullName>
+    <inlineHelpText>Número de unidades de facturación a las que se aplica esta programación de consumo. Por ejemplo, si la unidad de plazo de facturación es Mes, introduzca 12 para aplicar las programaciones de consumo para 12 meses. Aplique programaciones de consumo a un máximo de 20 trimestres, 60 meses o 5 años.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

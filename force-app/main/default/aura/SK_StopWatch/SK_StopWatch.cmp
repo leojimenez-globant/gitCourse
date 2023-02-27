@@ -1,0 +1,21 @@
+<aura:component >
+    
+    <aura:attribute name="contador" type="String" default="00:00:00"/>
+    <aura:attribute name="verContador" type="boolean" default="false"/> 
+    
+    <div class="slds-card slds-align_absolute-center" style="width:250px;padding:8px;" >
+        <div class="slds-grid slds-wrap" >
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center" >
+                <b>Cronometro</b>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center" >
+                {!v.contador}
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <lightning:button variant="brand" label="Play" onclick="{! c.handlePlayClick }" disabled="{!v.verContador}"/>
+                <lightning:button variant="brand" label="Pause" onclick="{! c.handlePauseClick }" disabled="{! !v.verContador}"/>
+                <lightning:button variant="brand" label="Stop" onclick="{! c.handleStopClick }" />
+            </div>
+        </div>
+    </div>    
+</aura:component>

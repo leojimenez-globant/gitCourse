@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ResultingBalance</fullName>
+    <inlineHelpText>El saldo de su entidad de referencia como resultado de la acción del evento.</inlineHelpText>
+</CustomField>

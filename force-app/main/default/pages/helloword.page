@@ -1,0 +1,11 @@
+<apex:page sidebar="false" showHeader="false" >
+  <h1>Hello World</h1>
+  	<apex:pageBlock title="A block title">
+    	<apex:pageBlockSection title="A section title">
+        	Estoy a 3 componentes de profundidad
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="A new section">
+            Nueva seccion
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

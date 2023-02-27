@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinanceTransactionId</fullName>
+    <inlineHelpText>Transacción financiera principal para la instantánea. Los campos de la instantánea heredan los valores de la transacción solo si el tipo de entidad de referencia de la transacción financiera es una factura, un pago, un memorándum de crédito, un memorándum de débito o un reembolso.</inlineHelpText>
+    <type>Lookup</type>
+</CustomField>

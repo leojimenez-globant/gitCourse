@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Balance</fullName>
+    <inlineHelpText>El saldo final de la entidad de referencia de la instantánea. Se hereda del saldo resultante de la transacción financiera si la entidad de referencia de la transacción financiera es un memorándum de crédito, un memorándum de débito, una factura, un pago o un reembolso.</inlineHelpText>
+</CustomField>

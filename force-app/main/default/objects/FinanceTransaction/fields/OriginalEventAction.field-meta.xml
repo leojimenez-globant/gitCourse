@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OriginalEventAction</fullName>
+    <inlineHelpText>La acción de evento de la transacción financiera cuando se creó la transacción financiera.</inlineHelpText>
+</CustomField>

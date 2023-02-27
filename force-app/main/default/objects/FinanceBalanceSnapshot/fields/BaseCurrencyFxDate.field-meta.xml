@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BaseCurrencyFxDate</fullName>
+    <inlineHelpText>Fecha utilizara para determinar el tipo de cambio de divisa. Defina este valor para utilizar más adelante cuando calcule las conversiones de divisa.</inlineHelpText>
+</CustomField>

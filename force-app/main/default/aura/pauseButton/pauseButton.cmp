@@ -1,0 +1,7 @@
+<aura:component>
+    <aura:registerEvent name="cmpPauseEvent" type="c:passTime"/>
+    <aura:attribute name="disabled" type="boolean"/>
+    <aura:attribute name="contadorPlay" type="String"/>
+    
+    <lightning:button variant="brand" label="Pause" onclick="{! c.handlePauseClick }" disabled="{!v.disabled}"/>
+</aura:component>

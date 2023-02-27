@@ -1,0 +1,27 @@
+<aura:component>
+    <aura:attribute name="contador" type="String" default="00:00:00"/>
+    <aura:attribute name="verContador" type="Boolean" default="false"/> 
+    <aura:attribute name="isStop" type="Boolean" default="false"/>
+    <aura:attribute name="verStop" type="Boolean" default="true"/>
+
+    <aura:handler name="cmpPlayEvent" event="c:passTime" action="{!c.handlecmpPlayEvent}"/>
+	<aura:handler name="cmpPauseEvent" event="c:passTime" action="{!c.handlecmpPauseEvent}"/>
+	<aura:handler name="cmpStopEvent" event="c:passTime" action="{!c.handlecmpStopEvent}"/>
+    
+    
+    <div class="slds-card slds-align_absolute-center" style="width:250px;padding:8px;" >
+        <div class="slds-grid slds-wrap" >
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center" >
+                <b>Cronometro</b>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center" >
+                {!v.contador}
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+                <c:playButton contadorPlay="{!v.contador}" disabled="{!v.verContador}" stop="{!v.isStop}"/>
+                <c:pauseButton contadorPlay="{!v.contador}" disabled="{! !v.verContador}" />
+                <c:stopButton disabled="{!v.verStop}"/>
+            </div>
+        </div>
+    </div>    
+</aura:component>

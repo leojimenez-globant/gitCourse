@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaxAmount</fullName>
+    <inlineHelpText>El importe total de los impuestos para el cargo realizado en su entidad de referencia como resultado de la acción del evento.</inlineHelpText>
+</CustomField>
